@@ -1,0 +1,14 @@
+<div class="container">
+    <section class="row">
+        <article class="col-lg-12">
+            <h1>Modification</h1>
+            <form #nom="ngForm" (ngSubmit)="onSubmitForm(nom)">
+                <p><input type="text" class="form-control" name="nom" [(ngModel)]="userUpdate.nom" ></p>
+                <p><button class="btn btn-primary form-control">Modifier</button> </p>
+            </form>
+        </article>
+        <article class="col-lg-12">
+            <p><button class="btn btn-danger" (click)="onReour()" type="submit" >Retour</button> </p>
+        </article>
+    </section>
+</div>

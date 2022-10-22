@@ -1,0 +1,17 @@
+<div class="container">
+    <section class="row">
+        <article class="col-lg-12" > Vous venez de consommer : {{ temps$ | async }} temps</article>
+        <article class="col-lg-6">
+            <h1>Liste des participants</h1>
+            <hr>
+            <ul>
+                <li *ngFor="let liste of nom"> {{ liste.nom }} | <a [routerLink]="['/userUpdate', liste.id] " > Mod. </a> | <button (click)="supprimer(liste.id)">Sup.</button> </li>
+            </ul>
+        </article>
+        <article class="col-lg-6">
+            <h1>Insertion des présents</h1>
+            <hr>
+            <app-user-insert></app-user-insert>
+        </article>
+    </section>
+</div>

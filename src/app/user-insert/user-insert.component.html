@@ -1,0 +1,5 @@
+<form [formGroup]="formulaire">
+    <p><input type="text" placeholder="Nom" class="form-control" formControlName="nom" required></p>
+    
+    <p><button class="btn btn-primary form-control" (click)="onFormulaireEnvoie()" [disabled]="formulaire.invalid" >Envoie</button> </p>
+</form>

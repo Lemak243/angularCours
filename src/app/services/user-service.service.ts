@@ -49,7 +49,6 @@ export class UserServiceService {
     };
 
     this.nom.push(envoie_formulaire);
-  
   }
 
 }

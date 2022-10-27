@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { UserModel } from '../models/user-model';
 import { UserServiceService } from '../services/user-service.service';
 
 @Component({
@@ -10,6 +12,7 @@ import { UserServiceService } from '../services/user-service.service';
 export class UserInsertComponent implements OnInit {
 
   formulaire!: FormGroup;
+  formulaireObservable$!: Observable<UserModel>;
 
   constructor( private formulaireConstructeur: FormBuilder,
                private userServices: UserServiceService
@@ -19,6 +22,8 @@ export class UserInsertComponent implements OnInit {
     this.formulaire = this.formulaireConstructeur.group({
       nom: [null, Validators.required]
     });
+
+    
   }
 
   onFormulaireEnvoie():void{

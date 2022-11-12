@@ -1,4 +1,5 @@
 export class Restaurant {
+    id!:number;
     title!: string;
     recipe!: string;
     author!: string;

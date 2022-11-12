@@ -1,6 +1,5 @@
 <ul *ngFor="let clients of client$ | async" >
     <li><strong>Titre</strong> : {{ clients.title }} </li>
     <li><strong>Recette</strong>  : {{ clients.recipe }} </li>
-    <li><strong>Chef cuisin</strong> : {{ clients.author }} </li>
-    <li><strong>Disponibilité</strong> : {{ clients.is_enabled }} </li>
+    <a [routerLink]="['/voirMenu', clients.id]"> <button > Voir +</button> </a>
 </ul>

@@ -9,6 +9,7 @@ import { UserUpdateComponent } from './user-update/user-update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserInsertComponent } from './user-insert/user-insert.component';
 import { MenuComponent } from './menu/menu.component';
+import { VoirMenuComponent } from './menu/voir-menu/voir-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './menu/menu.component';
     UserComponent,
     UserUpdateComponent,
     UserInsertComponent,
-    MenuComponent
+    MenuComponent,
+    VoirMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,9 @@ export class RestaurantServiceService {
     return this.http.get<Restaurant[]>("http://localhost:8888/php/api.php");
   }
 
-  getId(){}
+  getId(menuId: number):Observable<Restaurant>{
+   return this.http.get<Restaurant>(`http://localhost:8888/php/api.php/${menuId}`);
+  }
 
   post(){}
 

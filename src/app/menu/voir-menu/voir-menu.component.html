@@ -1,0 +1,7 @@
+<ul *ngIf="nume$ | async as valeur">
+    <li><strong>Titre</strong> : {{ valeur.title }} </li>
+    <li><strong>Recette</strong>  : {{ valeur.recipe }} </li>
+    <li><strong>author</strong>  : {{ valeur.author }} </li>
+    <li><strong>is_enabled</strong>  : {{ valeur.is_enabled }} </li>
+    <a routerLink="/menu"> <button > Retour</button> </a>
+</ul>
